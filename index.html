@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>野球対決ゲーム</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>⚾ 野球対決ゲーム</h1>
+        <p class="subtitle">投手 vs 打者の真剣勝負！</p>
+
+        <div class="game-area">
+            <div class="player-section pitcher">
+                <h2>🎯 投手</h2>
+                <button class="choice-btn" data-choice="inside" data-player="pitcher">
+                    ⚡ インコース
+                </button>
+                <button class="choice-btn" data-choice="center" data-player="pitcher">
+                    🌀 ど真ん中
+                </button>
+                <button class="choice-btn" data-choice="outside" data-player="pitcher">
+                    💫 アウトコース
+                </button>
+            </div>
+
+            <div class="player-section batter">
+                <h2>🏏 打者</h2>
+                <button class="choice-btn" data-choice="inside" data-player="batter">
+                    ⚡ インコース
+                </button>
+                <button class="choice-btn" data-choice="center" data-player="batter">
+                    🌀 ど真ん中
+                </button>
+                <button class="choice-btn" data-choice="outside" data-player="batter">
+                    💫 アウトコース
+                </button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-play" id="playBtn">対決開始！</button>
+            <button class="btn btn-reset" id="resetBtn">リセット</button>
+        </div>
+
+        <div id="result" class="result-area">
+            <img id="resultImage" class="result-image" src="" alt="" style="display: none;">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-text" id="resultText"></div>
+            <div class="result-detail" id="resultDetail"></div>
+        </div>
+
+        <div class="rules">
+            <h3>📋 ルール説明</h3>
+            <ul>
+                <li>・投手と打者のコースをそれぞれ選択します</li>
+                <li>・選択した後「対決開始！」をクリックします</li>
+                <li>・選択により様々な結果が出ます</li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
